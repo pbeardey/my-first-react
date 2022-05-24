@@ -1,13 +1,16 @@
 import React from 'react'
 
-const Dropdown = ({ title, options } ) => {
+const Dropdown = ( { title, options } ) => {
     return (
-        <div>{title}
-          <ul>
-            {options.map( (item) => (
-                <li>{item}</li>
-              ))}
-          </ul>
+        <div>
+          <div>{title}</div>
+          <div>
+            <ul>
+              {options.map( (item, i) => (
+                  <li key={i}>{item}</li>
+                ))}
+            </ul>
+          </div>
         </div>
     );
 }
