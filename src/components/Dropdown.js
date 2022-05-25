@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Dropdown = ( { title, options } ) => {
     const isOpen = false;
@@ -19,6 +21,11 @@ const Dropdown = ( { title, options } ) => {
             }
       </div>
     );
+}
+
+Dropdown.propTypes = {
+    title: PropTypes.string,
+    options: PropTypes.array
 }
 
 export default Dropdown;
