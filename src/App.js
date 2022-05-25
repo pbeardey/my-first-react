@@ -7,15 +7,28 @@ import Dropdown from './components/Dropdown';
 
 function App() {
   
-  const name = "Paul Beard"
+  const author = "Paul Beard"
   const dropDown = {
     title: 'List1',
-    options: ['first', 'second', 'third']
+    options: [
+      {
+        id: 1,
+        label: 'first option'
+      },
+      {
+       id: 2,
+        label: 'second option'
+      },
+      {
+        id: 3,
+        label: 'third option'
+      }
+    ]
   }
 
   return (
     <div className="App">
-      <Header name = {name}/>
+      <Header name = {author}/>
       <Dropdown title = {dropDown.title} options = {dropDown.options} /> 
     </div>
   );
